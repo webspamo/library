@@ -1,5 +1,5 @@
 <template>
-    <header class="header">
+    <div class="main-header">
         <h2>
             <slot name="h2"></slot>
         </h2>
@@ -70,7 +70,7 @@
                 </BaseTable>
             </div>
         </BaseModal>
-    </header>
+    </div>
 
     <hr />
     <div class="options">
@@ -224,6 +224,47 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.modal-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    > label {
+        margin-bottom: 0.2rem;
+        font-weight: 700;
+    }
+
+    > input {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.modal-aside {
+    display: flex;
+    flex-direction: column;
+
+    > label {
+        margin-bottom: 0.2rem;
+        font-weight: 700;
+    }
+
+    > input {
+        margin-bottom: 1.5rem;
+    }
+}
+.modal-controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    .submit-button {
+        width: 50%;
+    }
+    .delete-button {
+        width: 50%;
+        background-color: #db4c40;
+    }
+}
+
 .table-wrapper {
     max-height: 400px;
 }

@@ -50,35 +50,6 @@ export default {
     gap: 3rem;
 }
 
-.modal-aside {
-    display: flex;
-    flex-direction: column;
-
-    > label {
-        margin-bottom: 0.2rem;
-        font-weight: 700;
-    }
-
-    > input {
-        margin-bottom: 1.5rem;
-    }
-}
-
-.modal-form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-
-    > label {
-        margin-bottom: 0.2rem;
-        font-weight: 700;
-    }
-
-    > input {
-        margin-bottom: 1.5rem;
-    }
-}
-
 .close {
     width: 1em;
     height: 1em;

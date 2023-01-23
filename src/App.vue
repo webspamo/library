@@ -1,11 +1,16 @@
 <template lang="">
-    <main class="main">
-        <div class="main-container">
+    <header class="header">
+        <div class="header-container">
             <h1>LIBRARY</h1>
             <NavMenu
                 @select-tab="displayTab"
                 :tabs="tabNames"
-                :selected-tab="selectedTab.name"></NavMenu>
+                :selected-tab="selectedTab.name">
+            </NavMenu>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main-container">
             <component
                 v-if="selectedTab"
                 :is="selectedTab.component">
@@ -51,7 +56,7 @@ export default {
                     component: markRaw(CardsPage),
                     slots: ["All Cards", "New Card"],
                 },
-                {name: "Statis", component: markRaw(StatisticsPage)},
+                {name: "Statistic", component: markRaw(StatisticsPage)},
             ],
             selectedTab: null,
         };
@@ -103,13 +108,42 @@ body {
     font-family: "Open Sans", sans-serif;
     color: #e2ebf4;
 }
+.header {
+    width: 100%;
+}
 
+.header-container {
+    width: 80%;
+    margin: 1rem auto 0 auto;
+}
 .main {
     width: 100%;
 }
 
 .main-container {
     width: 80%;
-    margin: 1rem auto;
+    margin: auto;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-button {
+        width: 9rem;
+    }
+}
+
+.options {
+    margin-bottom: 2rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    .option {
+        display: flex;
+        gap: 20px;
+    }
 }
 </style>

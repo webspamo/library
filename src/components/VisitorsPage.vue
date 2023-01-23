@@ -1,5 +1,5 @@
 <template>
-    <header class="header">
+    <div class="main-header">
         <h2>
             <slot name="h2"></slot>
         </h2>
@@ -30,7 +30,7 @@
                     maxlength="10"
                     placeholder="0504217890"
                     v-model="modalDetails.phone" />
-                <div class="controls">
+                <div class="modal-controls">
                     <BaseButton
                         class="delete-button"
                         v-if="modalType === 'edit'"
@@ -45,7 +45,7 @@
                 </div>
             </form>
         </BaseModal>
-    </header>
+    </div>
 
     <hr />
     <div class="options">
@@ -253,16 +253,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    &-button {
-        width: 9rem;
-    }
-}
-
 .table {
     width: 100%;
 
@@ -285,19 +275,22 @@ export default {
     //border-bottom: 1px solid #edd83d;
 }
 
-.options {
-    margin-bottom: 2rem;
-
+.modal-form {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 
-    .option {
-        display: flex;
-        gap: 20px;
+    > label {
+        margin-bottom: 0.2rem;
+        font-weight: 700;
+    }
+
+    > input {
+        margin-bottom: 1.5rem;
     }
 }
 
-.controls {
+.modal-controls {
     display: flex;
     justify-content: space-between;
     gap: 2rem;
