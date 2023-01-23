@@ -122,7 +122,7 @@ body {
 
 .main-container {
     width: 80%;
-    margin: auto;
+    margin: 0 auto 1rem auto;
 }
 
 .main-header {

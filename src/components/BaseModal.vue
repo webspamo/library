@@ -37,8 +37,9 @@ export default {
 
 .modal-content {
     position: relative;
-    min-width: 40%;
-    max-height: 80%;
+    min-width: 40vw;
+    max-width: 60vw;
+    max-height: 80vh;
     overflow-y: scroll;
     padding: 1.5rem 2rem;
     background-color: #fefefe;
@@ -48,6 +49,18 @@ export default {
     display: flex;
     justify-content: space-between;
     gap: 3rem;
+}
+.modal-controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    .submit-button {
+        width: 50%;
+    }
+    .delete-button {
+        width: 50%;
+        background-color: #db4c40;
+    }
 }
 
 .close {

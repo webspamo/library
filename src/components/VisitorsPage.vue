@@ -254,14 +254,15 @@ export default {
 </script>
 <style lang="scss" scoped>
 .table {
-    width: 100%;
-
-    & thead th {
+    thead th,
+    tbody td {
         width: 40%;
     }
 
-    & thead th:first-child,
-    & thead th:last-child {
+    thead th:first-child,
+    tbody td:first-child,
+    thead th:last-child,
+    tbody td:last-child {
         width: 10%;
     }
 

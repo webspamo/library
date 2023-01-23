@@ -32,7 +32,7 @@
                     placeholder="0504217890"
                     v-model="modalDetails.phone" />
 
-                <div class="controls">
+                <div class="modal-controls">
                     <BaseButton
                         class="delete-button"
                         v-if="modalType === 'edit'"
@@ -46,17 +46,13 @@
                     </BaseButton>
                 </div>
             </form>
-            <div>
-                <div class="modal-aside">
-                    <h3>{{ modalDetails.asideHeader }}</h3>
-                    <input
-                        type="search"
-                        v-model="search" />
-                    <!-- <BaseButton>Search</BaseButton> -->
-                </div>
-                <BaseTable
-                    class="table modal-table"
-                    :entries="booksList">
+            <div class="modal-aside">
+                <h3>{{ modalDetails.asideHeader }}</h3>
+                <input
+                    type="search"
+                    v-model="search" />
+                <!-- <BaseButton>Search</BaseButton> -->
+                <BaseTable :entries="booksList">
                     <template #thead>
                         <th>BOOK</th>
                     </template>
@@ -95,7 +91,6 @@
     </div>
 
     <BaseTable
-        class="table"
         v-if="cardsList.length !== 0"
         :entries="cardsList">
         <template #thead>
@@ -153,6 +148,19 @@ export default {
             sortParameter: "",
             search: "",
         };
+    },
+    computed: {
+        filteredCardsList() {
+            //edit .....
+            return this.cardsList.filter((cards) => {
+                return (
+                    cards.name
+                        .toLowerCase()
+                        .indexOf(this.search.toLowerCase()) !== -1 ||
+                    cards.phone.indexOf(this.search) !== -1
+                );
+            });
+        },
     },
     methods: {
         saveCard() {},
@@ -224,8 +232,20 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.table-wrapper {
+    max-height: 400px;
+    &::-webkit-scrollbar-track-piece:start {
+        background: transparent;
+        margin-top: 3rem;
+    }
+    :deep(th),
+    :deep(td) {
+        padding: 0.8rem;
+    }
+}
 .modal-form {
-    width: 100%;
+    flex: 2;
+
     display: flex;
     flex-direction: column;
 
@@ -240,6 +260,8 @@ export default {
 }
 
 .modal-aside {
+    flex: 1;
+
     display: flex;
     flex-direction: column;
 
@@ -263,9 +285,5 @@ export default {
         width: 50%;
         background-color: #db4c40;
     }
-}
-
-.table-wrapper {
-    max-height: 400px;
 }
 </style>
