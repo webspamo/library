@@ -4,9 +4,7 @@
             <slot name="h2"></slot>
         </h2>
 
-        <BaseButton
-            @click="openModal('new')"
-            class="header-button">
+        <BaseButton @click="openModal('new')">
             <slot name="new"></slot>
         </BaseButton>
 
@@ -21,10 +19,12 @@
                 <label for="">Full name:</label>
                 <input
                     type="text"
+                    required
                     v-model="modalDetails.name" />
                 <label for="">Phone number:</label>
                 <input
                     type="tel"
+                    required
                     pattern="0[0-9]{2}[0-9]{3}[0-9]{4}"
                     minlength="10"
                     maxlength="10"
@@ -274,21 +274,6 @@ export default {
 .highlighted {
     color: #edd83d;
     //border-bottom: 1px solid #edd83d;
-}
-
-.modal-form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-
-    > label {
-        margin-bottom: 0.2rem;
-        font-weight: 700;
-    }
-
-    > input {
-        margin-bottom: 1.5rem;
-    }
 }
 
 .modal-controls {

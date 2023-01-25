@@ -4,9 +4,7 @@
             <slot name="h2"></slot>
         </h2>
 
-        <BaseButton
-            @click="openModal('new')"
-            class="header-button">
+        <BaseButton @click="openModal('new')">
             <slot name="new"></slot>
         </BaseButton>
 
@@ -241,21 +239,6 @@ export default {
     :deep(th),
     :deep(td) {
         padding: 0.8rem;
-    }
-}
-.modal-form {
-    flex: 2;
-
-    display: flex;
-    flex-direction: column;
-
-    > label {
-        margin-bottom: 0.2rem;
-        font-weight: 700;
-    }
-
-    > input {
-        margin-bottom: 1.5rem;
     }
 }
 

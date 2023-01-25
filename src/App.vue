@@ -44,7 +44,7 @@ export default {
                 {
                     name: "Books",
                     component: markRaw(BooksPage),
-                    slots: ["All Books", "New Book"],
+                    slots: ["All Books", "New Book(s)"],
                 },
                 {
                     name: "Visitors",
@@ -134,7 +134,20 @@ body {
         width: 9rem;
     }
 }
+.modal-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 
+    > label {
+        margin-bottom: 0.3rem;
+        font-weight: 700;
+    }
+
+    > input {
+        margin-bottom: 1.5rem;
+    }
+}
 .options {
     margin-bottom: 2rem;
 
