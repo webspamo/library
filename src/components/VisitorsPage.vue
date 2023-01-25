@@ -275,17 +275,4 @@ export default {
     color: #edd83d;
     //border-bottom: 1px solid #edd83d;
 }
-
-.modal-controls {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    .submit-button {
-        width: 50%;
-    }
-    .delete-button {
-        width: 50%;
-        background-color: #db4c40;
-    }
-}
 </style>

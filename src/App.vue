@@ -140,7 +140,7 @@ body {
     flex-direction: column;
 
     > label {
-        margin-bottom: 0.3rem;
+        margin-bottom: 0.4rem;
         font-weight: 700;
     }
 
@@ -148,6 +148,20 @@ body {
         margin-bottom: 1.5rem;
     }
 }
+.modal-controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    .submit-button {
+        margin-left: auto;
+        width: 50%;
+    }
+    .delete-button {
+        width: 50%;
+        background-color: #db4c40;
+    }
+}
+
 .options {
     margin-bottom: 2rem;
 

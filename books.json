@@ -5,7 +5,9 @@
         "language": "English",
         "pages": 209,
         "title": "Things Fall Apart",
-        "year": 1958
+        "year": 1958,
+        "id": 3544,
+        "amount": 108
     },
     {
         "author": "Hans Christian Andersen",
@@ -13,7 +15,9 @@
         "language": "Danish",
         "pages": 784,
         "title": "Fairy tales",
-        "year": 1836
+        "year": 1836,
+        "id": 3545,
+        "amount": 58
     },
     {
         "author": "Dante Alighieri",
@@ -21,7 +25,9 @@
         "language": "Italian",
         "pages": 928,
         "title": "The Divine Comedy",
-        "year": 1315
+        "year": 1315,
+        "id": 3546,
+        "amount": 46
     },
     {
         "author": "Unknown",
@@ -29,7 +35,9 @@
         "language": "Akkadian",
         "pages": 160,
         "title": "The Epic Of Gilgamesh",
-        "year": -1700
+        "year": 1700,
+        "id": 3547,
+        "amount": 52
     },
     {
         "author": "Unknown",
@@ -37,7 +45,9 @@
         "language": "Hebrew",
         "pages": 176,
         "title": "The Book Of Job",
-        "year": -600
+        "year": 600,
+        "id": 3548,
+        "amount": 92
     },
     {
         "author": "Unknown",
@@ -45,7 +55,9 @@
         "language": "Arabic",
         "pages": 288,
         "title": "One Thousand and One Nights",
-        "year": 1200
+        "year": 1200,
+        "id": 3549,
+        "amount": 41
     },
     {
         "author": "Unknown",
@@ -53,7 +65,9 @@
         "language": "Old Norse",
         "pages": 384,
         "title": "Njl's Saga",
-        "year": 1350
+        "year": 1350,
+        "id": 3550,
+        "amount": 69
     },
     {
         "author": "Jane Austen",
@@ -61,7 +75,9 @@
         "language": "English",
         "pages": 226,
         "title": "Pride and Prejudice",
-        "year": 1813
+        "year": 1813,
+        "id": 3551,
+        "amount": 32
     },
     {
         "author": "Honor de Balzac",
@@ -69,7 +85,9 @@
         "language": "French",
         "pages": 443,
         "title": "Le Pre Goriot",
-        "year": 1835
+        "year": 1835,
+        "id": 3552,
+        "amount": 33
     },
     {
         "author": "Samuel Beckett",
@@ -77,7 +95,9 @@
         "language": "French, English",
         "pages": 256,
         "title": "Molloy, Malone Dies, The Unnamable, the trilogy",
-        "year": 1952
+        "year": 1952,
+        "id": 3553,
+        "amount": 70
     },
     {
         "author": "Giovanni Boccaccio",
@@ -85,7 +105,9 @@
         "language": "Italian",
         "pages": 1024,
         "title": "The Decameron",
-        "year": 1351
+        "year": 1351,
+        "id": 3554,
+        "amount": 65
     },
     {
         "author": "Jorge Luis Borges",
@@ -93,7 +115,9 @@
         "language": "Spanish",
         "pages": 224,
         "title": "Ficciones",
-        "year": 1965
+        "year": 1965,
+        "id": 3555,
+        "amount": 25
     },
     {
         "author": "Emily Bront",
@@ -101,7 +125,9 @@
         "language": "English",
         "pages": 342,
         "title": "Wuthering Heights",
-        "year": 1847
+        "year": 1847,
+        "id": 3556,
+        "amount": 22
     },
     {
         "author": "Albert Camus",
@@ -109,7 +135,9 @@
         "language": "French",
         "pages": 185,
         "title": "The Stranger",
-        "year": 1942
+        "year": 1942,
+        "id": 3557,
+        "amount": 21
     },
     {
         "author": "Paul Celan",
@@ -117,7 +145,9 @@
         "language": "German",
         "pages": 320,
         "title": "Poems",
-        "year": 1952
+        "year": 1952,
+        "id": 3558,
+        "amount": 60
     },
     {
         "author": "Louis-Ferdinand Cline",
@@ -125,7 +155,9 @@
         "language": "French",
         "pages": 505,
         "title": "Journey to the End of the Night",
-        "year": 1932
+        "year": 1932,
+        "id": 3559,
+        "amount": 67
     },
     {
         "author": "Miguel de Cervantes",
@@ -133,7 +165,9 @@
         "language": "Spanish",
         "pages": 1056,
         "title": "Don Quijote De La Mancha",
-        "year": 1610
+        "year": 1610,
+        "id": 3560,
+        "amount": 50
     },
     {
         "author": "Geoffrey Chaucer",
@@ -141,7 +175,9 @@
         "language": "English",
         "pages": 544,
         "title": "The Canterbury Tales",
-        "year": 1450
+        "year": 1450,
+        "id": 3561,
+        "amount": 43
     },
     {
         "author": "Anton Chekhov",
@@ -149,7 +185,9 @@
         "language": "Russian",
         "pages": 194,
         "title": "Stories",
-        "year": 1886
+        "year": 1886,
+        "id": 3562,
+        "amount": 40
     },
     {
         "author": "Joseph Conrad",
@@ -157,7 +195,9 @@
         "language": "English",
         "pages": 320,
         "title": "Nostromo",
-        "year": 1904
+        "year": 1904,
+        "id": 3563,
+        "amount": 84
     },
     {
         "author": "Charles Dickens",
@@ -165,7 +205,9 @@
         "language": "English",
         "pages": 194,
         "title": "Great Expectations",
-        "year": 1861
+        "year": 1861,
+        "id": 3564,
+        "amount": 44
     },
     {
         "author": "Denis Diderot",
@@ -173,7 +215,9 @@
         "language": "French",
         "pages": 596,
         "title": "Jacques the Fatalist",
-        "year": 1796
+        "year": 1796,
+        "id": 3565,
+        "amount": 84
     },
     {
         "author": "Alfred Dblin",
@@ -181,7 +225,9 @@
         "language": "German",
         "pages": 600,
         "title": "Berlin Alexanderplatz",
-        "year": 1929
+        "year": 1929,
+        "id": 3566,
+        "amount": 39
     },
     {
         "author": "Fyodor Dostoevsky",
@@ -189,7 +235,9 @@
         "language": "Russian",
         "pages": 551,
         "title": "Crime and Punishment",
-        "year": 1866
+        "year": 1866,
+        "id": 3567,
+        "amount": 78
     },
     {
         "author": "Fyodor Dostoevsky",
@@ -197,7 +245,9 @@
         "language": "Russian",
         "pages": 656,
         "title": "The Idiot",
-        "year": 1869
+        "year": 1869,
+        "id": 3568,
+        "amount": 77
     },
     {
         "author": "Fyodor Dostoevsky",
@@ -205,7 +255,9 @@
         "language": "Russian",
         "pages": 768,
         "title": "The Possessed",
-        "year": 1872
+        "year": 1872,
+        "id": 3569,
+        "amount": 81
     },
     {
         "author": "Fyodor Dostoevsky",
@@ -213,7 +265,9 @@
         "language": "Russian",
         "pages": 824,
         "title": "The Brothers Karamazov",
-        "year": 1880
+        "year": 1880,
+        "id": 3570,
+        "amount": 45
     },
     {
         "author": "George Eliot",
@@ -221,7 +275,9 @@
         "language": "English",
         "pages": 800,
         "title": "Middlemarch",
-        "year": 1871
+        "year": 1871,
+        "id": 3571,
+        "amount": 97
     },
     {
         "author": "Ralph Ellison",
@@ -229,7 +285,9 @@
         "language": "English",
         "pages": 581,
         "title": "Invisible Man",
-        "year": 1952
+        "year": 1952,
+        "id": 3572,
+        "amount": 98
     },
     {
         "author": "Euripides",
@@ -237,7 +295,9 @@
         "language": "Greek",
         "pages": 104,
         "title": "Medea",
-        "year": -431
+        "year": 431,
+        "id": 3573,
+        "amount": 77
     },
     {
         "author": "William Faulkner",
@@ -245,7 +305,9 @@
         "language": "English",
         "pages": 313,
         "title": "Absalom, Absalom!",
-        "year": 1936
+        "year": 1936,
+        "id": 3574,
+        "amount": 71
     },
     {
         "author": "William Faulkner",
@@ -253,7 +315,9 @@
         "language": "English",
         "pages": 326,
         "title": "The Sound and the Fury",
-        "year": 1929
+        "year": 1929,
+        "id": 3575,
+        "amount": 97
     },
     {
         "author": "Gustave Flaubert",
@@ -261,7 +325,9 @@
         "language": "French",
         "pages": 528,
         "title": "Madame Bovary",
-        "year": 1857
+        "year": 1857,
+        "id": 3576,
+        "amount": 14
     },
     {
         "author": "Gustave Flaubert",
@@ -269,7 +335,9 @@
         "language": "French",
         "pages": 606,
         "title": "Sentimental Education",
-        "year": 1869
+        "year": 1869,
+        "id": 3577,
+        "amount": 37
     },
     {
         "author": "Federico Garceda Lorca",
@@ -277,7 +345,9 @@
         "language": "Spanish",
         "pages": 218,
         "title": "Gypsy Ballads",
-        "year": 1928
+        "year": 1928,
+        "id": 3578,
+        "amount": 26
     },
     {
         "author": "Gabriel Garceda Mrquez",
@@ -285,7 +355,9 @@
         "language": "Spanish",
         "pages": 417,
         "title": "One Hundred Years of Solitude",
-        "year": 1967
+        "year": 1967,
+        "id": 3579,
+        "amount": 46
     },
     {
         "author": "Gabriel Garceda Mrquez",
@@ -293,7 +365,9 @@
         "language": "Spanish",
         "pages": 368,
         "title": "Love in the Time of Cholera",
-        "year": 1985
+        "year": 1985,
+        "id": 3580,
+        "amount": 80
     },
     {
         "author": "Johann Wolfgang von Goethe",
@@ -301,7 +375,9 @@
         "language": "German",
         "pages": 158,
         "title": "Faust",
-        "year": 1832
+        "year": 1832,
+        "id": 3581,
+        "amount": 48
     },
     {
         "author": "Nikolai Gogol",
@@ -309,7 +385,9 @@
         "language": "Russian",
         "pages": 432,
         "title": "Dead Souls",
-        "year": 1842
+        "year": 1842,
+        "id": 3582,
+        "amount": 15
     },
     {
         "author": "Gcnter Grass",
@@ -317,7 +395,9 @@
         "language": "German",
         "pages": 600,
         "title": "The Tin Drum",
-        "year": 1959
+        "year": 1959,
+        "id": 3583,
+        "amount": 43
     },
     {
         "author": "Joo Guimares Rosa",
@@ -325,7 +405,9 @@
         "language": "Portuguese",
         "pages": 494,
         "title": "The Devil to Pay in the Backlands",
-        "year": 1956
+        "year": 1956,
+        "id": 3584,
+        "amount": 37
     },
     {
         "author": "Knut Hamsun",
@@ -333,7 +415,9 @@
         "language": "Norwegian",
         "pages": 176,
         "title": "Hunger",
-        "year": 1890
+        "year": 1890,
+        "id": 3585,
+        "amount": 101
     },
     {
         "author": "Ernest Hemingway",
@@ -341,7 +425,9 @@
         "language": "English",
         "pages": 128,
         "title": "The Old Man and the Sea",
-        "year": 1952
+        "year": 1952,
+        "id": 3586,
+        "amount": 53
     },
     {
         "author": "Homer",
@@ -349,7 +435,9 @@
         "language": "Greek",
         "pages": 608,
         "title": "Iliad",
-        "year": -735
+        "year": 735,
+        "id": 3587,
+        "amount": 58
     },
     {
         "author": "Homer",
@@ -357,7 +445,9 @@
         "language": "Greek",
         "pages": 374,
         "title": "Odyssey",
-        "year": -800
+        "year": 800,
+        "id": 3588,
+        "amount": 75
     },
     {
         "author": "Henrik Ibsen",
@@ -365,7 +455,9 @@
         "language": "Norwegian",
         "pages": 68,
         "title": "A Doll's House",
-        "year": 1879
+        "year": 1879,
+        "id": 3589,
+        "amount": 67
     },
     {
         "author": "James Joyce",
@@ -373,7 +465,9 @@
         "language": "English",
         "pages": 228,
         "title": "Ulysses",
-        "year": 1922
+        "year": 1922,
+        "id": 3590,
+        "amount": 89
     },
     {
         "author": "Franz Kafka",
@@ -381,7 +475,9 @@
         "language": "German",
         "pages": 488,
         "title": "Stories",
-        "year": 1924
+        "year": 1924,
+        "id": 3591,
+        "amount": 46
     },
     {
         "author": "Franz Kafka",
@@ -389,7 +485,9 @@
         "language": "German",
         "pages": 160,
         "title": "The Trial",
-        "year": 1925
+        "year": 1925,
+        "id": 3592,
+        "amount": 48
     },
     {
         "author": "Franz Kafka",
@@ -397,7 +495,9 @@
         "language": "German",
         "pages": 352,
         "title": "The Castle",
-        "year": 1926
+        "year": 1926,
+        "id": 3593,
+        "amount": 14
     },
     {
         "author": "Klidsa",
@@ -405,7 +505,9 @@
         "language": "Sanskrit",
         "pages": 147,
         "title": "The recognition of Shakuntala",
-        "year": 150
+        "year": 150,
+        "id": 3594,
+        "amount": 48
     },
     {
         "author": "Yasunari Kawabata",
@@ -413,7 +515,9 @@
         "language": "Japanese",
         "pages": 288,
         "title": "The Sound of the Mountain",
-        "year": 1954
+        "year": 1954,
+        "id": 3595,
+        "amount": 83
     },
     {
         "author": "Nikos Kazantzakis",
@@ -421,7 +525,9 @@
         "language": "Greek",
         "pages": 368,
         "title": "Zorba the Greek",
-        "year": 1946
+        "year": 1946,
+        "id": 3596,
+        "amount": 71
     },
     {
         "author": "D. H. Lawrence",
@@ -429,7 +535,9 @@
         "language": "English",
         "pages": 432,
         "title": "Sons and Lovers",
-        "year": 1913
+        "year": 1913,
+        "id": 3597,
+        "amount": 89
     },
     {
         "author": "Halldr Laxness",
@@ -437,7 +545,9 @@
         "language": "Icelandic",
         "pages": 470,
         "title": "Independent People",
-        "year": 1934
+        "year": 1934,
+        "id": 3598,
+        "amount": 99
     },
     {
         "author": "Giacomo Leopardi",
@@ -445,7 +555,9 @@
         "language": "Italian",
         "pages": 184,
         "title": "Poems",
-        "year": 1818
+        "year": 1818,
+        "id": 3599,
+        "amount": 19
     },
     {
         "author": "Doris Lessing",
@@ -453,7 +565,9 @@
         "language": "English",
         "pages": 688,
         "title": "The Golden Notebook",
-        "year": 1962
+        "year": 1962,
+        "id": 3600,
+        "amount": 20
     },
     {
         "author": "Astrid Lindgren",
@@ -461,7 +575,9 @@
         "language": "Swedish",
         "pages": 160,
         "title": "Pippi Longstocking",
-        "year": 1945
+        "year": 1945,
+        "id": 3601,
+        "amount": 83
     },
     {
         "author": "Lu Xun",
@@ -469,7 +585,9 @@
         "language": "Chinese",
         "pages": 389,
         "title": "Diary of a Madman",
-        "year": 1918
+        "year": 1918,
+        "id": 3602,
+        "amount": 28
     },
     {
         "author": "Naguib Mahfouz",
@@ -477,7 +595,9 @@
         "language": "Arabic",
         "pages": 355,
         "title": "Children of Gebelawi",
-        "year": 1959
+        "year": 1959,
+        "id": 3603,
+        "amount": 21
     },
     {
         "author": "Thomas Mann",
@@ -485,7 +605,9 @@
         "language": "German",
         "pages": 736,
         "title": "Buddenbrooks",
-        "year": 1901
+        "year": 1901,
+        "id": 3604,
+        "amount": 48
     },
     {
         "author": "Thomas Mann",
@@ -493,7 +615,9 @@
         "language": "German",
         "pages": 720,
         "title": "The Magic Mountain",
-        "year": 1924
+        "year": 1924,
+        "id": 3605,
+        "amount": 97
     },
     {
         "author": "Herman Melville",
@@ -501,7 +625,9 @@
         "language": "English",
         "pages": 378,
         "title": "Moby Dick",
-        "year": 1851
+        "year": 1851,
+        "id": 3606,
+        "amount": 63
     },
     {
         "author": "Michel de Montaigne",
@@ -509,7 +635,9 @@
         "language": "French",
         "pages": 404,
         "title": "Essays",
-        "year": 1595
+        "year": 1595,
+        "id": 3607,
+        "amount": 63
     },
     {
         "author": "Elsa Morante",
@@ -517,7 +645,9 @@
         "language": "Italian",
         "pages": 600,
         "title": "History",
-        "year": 1974
+        "year": 1974,
+        "id": 3608,
+        "amount": 32
     },
     {
         "author": "Toni Morrison",
@@ -525,7 +655,9 @@
         "language": "English",
         "pages": 321,
         "title": "Beloved",
-        "year": 1987
+        "year": 1987,
+        "id": 3609,
+        "amount": 29
     },
     {
         "author": "Murasaki Shikibu",
@@ -533,7 +665,9 @@
         "language": "Japanese",
         "pages": 1360,
         "title": "The Tale of Genji",
-        "year": 1006
+        "year": 1006,
+        "id": 3610,
+        "amount": 97
     },
     {
         "author": "Robert Musil",
@@ -541,7 +675,9 @@
         "language": "German",
         "pages": 365,
         "title": "The Man Without Qualities",
-        "year": 1931
+        "year": 1931,
+        "id": 3611,
+        "amount": 40
     },
     {
         "author": "Vladimir Nabokov",
@@ -549,7 +685,9 @@
         "language": "English",
         "pages": 317,
         "title": "Lolita",
-        "year": 1955
+        "year": 1955,
+        "id": 3612,
+        "amount": 65
     },
     {
         "author": "George Orwell",
@@ -557,7 +695,9 @@
         "language": "English",
         "pages": 272,
         "title": "Nineteen Eighty-Four",
-        "year": 1949
+        "year": 1949,
+        "id": 3613,
+        "amount": 36
     },
     {
         "author": "Ovid",
@@ -565,7 +705,9 @@
         "language": "Classical Latin",
         "pages": 576,
         "title": "Metamorphoses",
-        "year": 100
+        "year": 100,
+        "id": 3614,
+        "amount": 29
     },
     {
         "author": "Fernando Pessoa",
@@ -573,7 +715,9 @@
         "language": "Portuguese",
         "pages": 272,
         "title": "The Book of Disquiet",
-        "year": 1928
+        "year": 1928,
+        "id": 3615,
+        "amount": 94
     },
     {
         "author": "Edgar Allan Poe",
@@ -581,7 +725,9 @@
         "language": "English",
         "pages": 842,
         "title": "Tales",
-        "year": 1950
+        "year": 1950,
+        "id": 3616,
+        "amount": 73
     },
     {
         "author": "Marcel Proust",
@@ -589,7 +735,9 @@
         "language": "French",
         "pages": 2408,
         "title": "In Search of Lost Time",
-        "year": 1920
+        "year": 1920,
+        "id": 3617,
+        "amount": 98
     },
     {
         "author": "Franois Rabelais",
@@ -597,7 +745,9 @@
         "language": "French",
         "pages": 623,
         "title": "Gargantua and Pantagruel",
-        "year": 1533
+        "year": 1533,
+        "id": 3618,
+        "amount": 96
     },
     {
         "author": "Juan Rulfo",
@@ -605,7 +755,9 @@
         "language": "Spanish",
         "pages": 124,
         "title": "Pedro Pramo",
-        "year": 1955
+        "year": 1955,
+        "id": 3619,
+        "amount": 53
     },
     {
         "author": "Rumi",
@@ -613,7 +765,9 @@
         "language": "Persian",
         "pages": 438,
         "title": "The Masnavi",
-        "year": 1236
+        "year": 1236,
+        "id": 3620,
+        "amount": 70
     },
     {
         "author": "Salman Rushdie",
@@ -621,7 +775,9 @@
         "language": "English",
         "pages": 536,
         "title": "Midnight's Children",
-        "year": 1981
+        "year": 1981,
+        "id": 3621,
+        "amount": 25
     },
     {
         "author": "Saadi",
@@ -629,7 +785,9 @@
         "language": "Persian",
         "pages": 298,
         "title": "Bostan",
-        "year": 1257
+        "year": 1257,
+        "id": 3622,
+        "amount": 20
     },
     {
         "author": "Tayeb Salih",
@@ -637,7 +795,9 @@
         "language": "Arabic",
         "pages": 139,
         "title": "Season of Migration to the North",
-        "year": 1966
+        "year": 1966,
+        "id": 3623,
+        "amount": 58
     },
     {
         "author": "Joseph Saramago",
@@ -645,7 +805,9 @@
         "language": "Portuguese",
         "pages": 352,
         "title": "Blindness",
-        "year": 1995
+        "year": 1995,
+        "id": 3624,
+        "amount": 85
     },
     {
         "author": "William Shakespeare",
@@ -653,7 +815,9 @@
         "language": "English",
         "pages": 432,
         "title": "Hamlet",
-        "year": 1603
+        "year": 1603,
+        "id": 3625,
+        "amount": 77
     },
     {
         "author": "William Shakespeare",
@@ -661,7 +825,9 @@
         "language": "English",
         "pages": 384,
         "title": "King Lear",
-        "year": 1608
+        "year": 1608,
+        "id": 3626,
+        "amount": 44
     },
     {
         "author": "William Shakespeare",
@@ -669,7 +835,9 @@
         "language": "English",
         "pages": 314,
         "title": "Othello",
-        "year": 1609
+        "year": 1609,
+        "id": 3627,
+        "amount": 41
     },
     {
         "author": "Sophocles",
@@ -677,7 +845,9 @@
         "language": "Greek",
         "pages": 88,
         "title": "Oedipus the King",
-        "year": -430
+        "year": 430,
+        "id": 3628,
+        "amount": 54
     },
     {
         "author": "Stendhal",
@@ -685,7 +855,9 @@
         "language": "French",
         "pages": 576,
         "title": "The Red and the Black",
-        "year": 1830
+        "year": 1830,
+        "id": 3629,
+        "amount": 84
     },
     {
         "author": "Laurence Sterne",
@@ -693,7 +865,9 @@
         "language": "English",
         "pages": 640,
         "title": "The Life And Opinions of Tristram Shandy",
-        "year": 1760
+        "year": 1760,
+        "id": 3630,
+        "amount": 25
     },
     {
         "author": "Italo Svevo",
@@ -701,7 +875,9 @@
         "language": "Italian",
         "pages": 412,
         "title": "Confessions of Zeno",
-        "year": 1923
+        "year": 1923,
+        "id": 3631,
+        "amount": 23
     },
     {
         "author": "Jonathan Swift",
@@ -709,7 +885,9 @@
         "language": "English",
         "pages": 178,
         "title": "Gulliver's Travels",
-        "year": 1726
+        "year": 1726,
+        "id": 3632,
+        "amount": 40
     },
     {
         "author": "Leo Tolstoy",
@@ -717,7 +895,9 @@
         "language": "Russian",
         "pages": 1296,
         "title": "War and Peace",
-        "year": 1867
+        "year": 1867,
+        "id": 3633,
+        "amount": 89
     },
     {
         "author": "Leo Tolstoy",
@@ -725,7 +905,9 @@
         "language": "Russian",
         "pages": 864,
         "title": "Anna Karenina",
-        "year": 1877
+        "year": 1877,
+        "id": 3634,
+        "amount": 83
     },
     {
         "author": "Leo Tolstoy",
@@ -733,7 +915,9 @@
         "language": "Russian",
         "pages": 92,
         "title": "The Death of Ivan Ilyich",
-        "year": 1886
+        "year": 1886,
+        "id": 3635,
+        "amount": 56
     },
     {
         "author": "Mark Twain",
@@ -741,7 +925,9 @@
         "language": "English",
         "pages": 224,
         "title": "The Adventures of Huckleberry Finn",
-        "year": 1884
+        "year": 1884,
+        "id": 3636,
+        "amount": 106
     },
     {
         "author": "Valmiki",
@@ -749,7 +935,9 @@
         "language": "Sanskrit",
         "pages": 152,
         "title": "Ramayana",
-        "year": -450
+        "year": 4250,
+        "id": 3637,
+        "amount": 36
     },
     {
         "author": "Virgil",
@@ -757,7 +945,9 @@
         "language": "Classical Latin",
         "pages": 442,
         "title": "The Aeneid",
-        "year": -23
+        "year": 2223,
+        "id": 3638,
+        "amount": 55
     },
     {
         "author": "Vyasa",
@@ -765,7 +955,9 @@
         "language": "Sanskrit",
         "pages": 276,
         "title": "Mahabharata",
-        "year": -700
+        "year": 700,
+        "id": 3639,
+        "amount": 75
     },
     {
         "author": "Walt Whitman",
@@ -773,7 +965,9 @@
         "language": "English",
         "pages": 152,
         "title": "Leaves of Grass",
-        "year": 1855
+        "year": 1855,
+        "id": 3640,
+        "amount": 33
     },
     {
         "author": "Virginia Woolf",
@@ -781,7 +975,9 @@
         "language": "English",
         "pages": 216,
         "title": "Mrs Dalloway",
-        "year": 1925
+        "year": 1925,
+        "id": 3641,
+        "amount": 71
     },
     {
         "author": "Virginia Woolf",
@@ -789,7 +985,9 @@
         "language": "English",
         "pages": 209,
         "title": "To the Lighthouse",
-        "year": 1927
+        "year": 1927,
+        "id": 3642,
+        "amount": 55
     },
     {
         "author": "Marguerite Yourcenar",
@@ -797,6 +995,8 @@
         "language": "French",
         "pages": 408,
         "title": "Memoirs of Hadrian",
-        "year": 1951
+        "year": 1951,
+        "id": 3643,
+        "amount": 17
     }
 ]

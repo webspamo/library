@@ -43,9 +43,10 @@
                     maxlength="4"
                     placeholder="127"
                     v-model="modalDetails.pages" />
-                <label for="">Amount:</label>
                 <div class="modal-quantity">
+                    <label class="quantity-label">Amount:</label>
                     <button
+                        type="button"
                         :disabled="modalDetails.amount === 1"
                         @click="modalDetails.amount--"
                         class="quantity-button">
@@ -58,6 +59,7 @@
                         v-model="modalDetails.amount"
                         class="quantity-input" />
                     <button
+                        type="button"
                         @click="modalDetails.amount++"
                         class="quantity-button">
                         +
@@ -79,11 +81,74 @@
             </form>
         </BaseModal>
     </div>
+
+    <hr />
+    <div class="options">
+        //edit ..........
+        <div class="option">
+            <label for="parameters">Sort by:</label>
+            <select
+                name="parameters"
+                id="parameters"
+                v-model="sortParameter">
+                <option value="id">ID</option>
+                <option value="name">NAME</option>
+            </select>
+            <BaseButton @click="sortCardsBy(sortParameter)">Sort</BaseButton>
+        </div>
+        <div class="option">
+            <label for="">Search:</label>
+            <input
+                type="search"
+                v-model="search" />
+            <BaseButton>Search</BaseButton>
+        </div>
+    </div>
+
+    <BaseTable
+        v-if="booksList.length !== 0"
+        :entries="booksList">
+        <template #thead>
+            <th>ID</th>
+            <th>TITLE</th>
+            <th>AUTHOR</th>
+            <th>COUNTRY</th>
+            <th>LANGUAGE</th>
+            <th>YEAR</th>
+            <th>PAGES</th>
+            <th>AMOUNT</th>
+            <th>EDIT</th>
+        </template>
+        <template #tbody>
+            <tr
+                v-for="book in filteredBooksList"
+                :key="book">
+                <td>{{ book.id }}</td>
+                <td>{{ book.title }}</td>
+                <td>{{ book.author }}</td>
+                <td>{{ book.country }}</td>
+                <td>{{ book.language }}</td>
+                <td>{{ book.year }}</td>
+                <td>{{ book.pages }}</td>
+                <td>{{ book.amount }}</td>
+                <td>
+                    <svg-icon
+                        type="mdi"
+                        :path="path"
+                        class="table-icon"
+                        @click="openModal('edit', book)"></svg-icon>
+                </td>
+            </tr>
+        </template>
+    </BaseTable>
 </template>
 
 <script>
+import SvgIcon from "@jamescoyle/vue-icon";
+import {mdiNotebookEditOutline} from "@mdi/js";
+import books from "../../books.json";
 import BaseButton from "./BaseButton.vue";
-//import BaseTable from "./BaseTable.vue";
+import BaseTable from "./BaseTable.vue";
 import BaseModal from "./BaseModal.vue";
 
 export default {
@@ -92,11 +157,13 @@ export default {
     components: {
         BaseButton,
         BaseModal,
+        BaseTable,
+        SvgIcon,
     },
 
     data() {
         return {
-            booksList: [],
+            booksList: books,
             isModalOpen: false,
             modalType: "",
             modalDetails: {
@@ -111,11 +178,32 @@ export default {
             },
             sortParameter: "",
             search: "",
+            path: mdiNotebookEditOutline,
         };
+    },
+
+    computed: {
+        filteredBooksList() {
+            return this.booksList.filter((book) => {
+                return (
+                    book.title
+                        .toLowerCase()
+                        .indexOf(this.search.toLowerCase()) !== -1 ||
+                    book.author
+                        .toLowerCase()
+                        .indexOf(this.search.toLowerCase()) !== -1 ||
+                    book.country
+                        .toLowerCase()
+                        .indexOf(this.search.toLowerCase()) !== -1 ||
+                    book.year.indexOf(this.search) !== -1
+                );
+            });
+        },
     },
 
     methods: {
         openModal(type, visitor = null) {
+            ///edit
             this.isModalOpen = true;
             this.modalType = type;
 
@@ -133,30 +221,67 @@ export default {
                     break;
             }
         },
+        getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+        },
+    },
+    mounted() {
+        // for (const book of books) {
+        //     book.amount = this.getRandomInt(10, 24) + this.getRandomInt(2, 87);
+        // }
+        // console.table(JSON.stringify(books));
     },
 };
 </script>
 <style lang="scss" scoped>
 .modal-quantity {
     margin-bottom: 1.5rem;
+    font-weight: 700;
 
     display: flex;
+    align-items: center;
+    justify-content: flex-end;
     gap: 0.5rem;
 }
 
-.quantity-button {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: none;
-    background-color: lightgray;
-    &:hover {
-        cursor: pointer;
-        background-color: rgb(185, 185, 185);
+.quantity {
+    &-label {
+        margin-right: 0.5rem;
+    }
+    &-button {
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        border: none;
+        background-color: lightgray;
+        &:hover {
+            cursor: pointer;
+            background-color: rgb(185, 185, 185);
+        }
+    }
+    &-input {
+        width: 2rem;
+        text-align: center;
     }
 }
-.quantity-input {
-    width: 2rem;
-    text-align: center;
+
+.table {
+    thead th,
+    tbody td {
+        width: 40%;
+    }
+
+    thead th:first-child,
+    tbody td:first-child,
+    thead th:last-child,
+    tbody td:last-child {
+        width: 10%;
+    }
+
+    &-icon {
+        cursor: pointer;
+    }
 }
 </style>
