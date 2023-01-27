@@ -138,7 +138,8 @@ export default {
                     visitor.name
                         .toLowerCase()
                         .indexOf(this.search.toLowerCase()) !== -1 ||
-                    visitor.phone.indexOf(this.search) !== -1
+                    visitor.phone.indexOf(this.search) !== -1 ||
+                    String(visitor.id).indexOf(this.search) !== -1
                 );
             });
         },
@@ -155,15 +156,9 @@ export default {
                     phone: "",
                 };
                 newVisitor.id = Date.now();
-                this.modalDetails.name = this.modalDetails.name.trim();
+                newVisitor.name = this.modalDetails.name.trim();
                 newVisitor.phone = this.modalDetails.phone.replace(/\s+/g, "");
 
-                if (
-                    this.modalDetails.name !== "" &&
-                    this.modalDetails.phone !== ""
-                ) {
-                    newVisitor.name = this.modalDetails.name;
-                } else return;
                 this.visitorsList.push(newVisitor);
             } else if (this.modalType === "edit") {
                 const visitorId = this.modalDetails.visitorId;
@@ -179,6 +174,18 @@ export default {
             this.modalDetails.phone = "";
 
             this.isModalOpen = false;
+        },
+
+        deleteVisitor() {
+            const visitorIndex = this.visitorsList.findIndex(
+                (visitor) => visitor.id === this.modalDetails.visitorId
+            );
+            this.visitorsList.splice(visitorIndex, 1);
+
+            this.isModalOpen = false;
+
+            this.modalDetails.name = "";
+            this.modalDetails.phone = "";
         },
 
         openModal(type, visitor = null) {
@@ -201,24 +208,13 @@ export default {
                     break;
             }
         },
-        deleteVisitor() {
-            const visitorIndex = this.visitorsList.findIndex(
-                (visitor) => visitor.id === this.modalDetails.visitorId
-            );
-            this.visitorsList.splice(visitorIndex, 1);
-
-            this.modalDetails.name = "";
-            this.modalDetails.phone = "";
-
-            this.isModalOpen = false;
-        },
         sortVisitorsBy(parameter) {
             switch (parameter) {
                 case "name":
                     {
                         this.visitorsList.sort((a, b) => {
-                            const nameA = a.name.toUpperCase();
-                            const nameB = b.name.toUpperCase();
+                            const nameA = a[parameter].toUpperCase();
+                            const nameB = b[parameter].toUpperCase();
                             if (nameA < nameB) {
                                 return -1;
                             }
@@ -231,7 +227,9 @@ export default {
                     break;
                 case "id":
                     {
-                        this.visitorsList.sort((a, b) => a.id - b.id);
+                        this.visitorsList.sort(
+                            (a, b) => a[parameter] - b[parameter]
+                        );
                     }
                     break;
             }

@@ -202,8 +202,8 @@ export default {
                 case "name":
                     {
                         this.cardsList.sort((a, b) => {
-                            const nameA = a.name.toUpperCase();
-                            const nameB = b.name.toUpperCase();
+                            const nameA = a[parameter].toUpperCase();
+                            const nameB = b[parameter].toUpperCase();
                             if (nameA < nameB) {
                                 return -1;
                             }
@@ -216,7 +216,9 @@ export default {
                     break;
                 case "id":
                     {
-                        this.cardsList.sort((a, b) => a.id - b.id);
+                        this.cardsList.sort(
+                            (a, b) => a[parameter] - b[parameter]
+                        );
                     }
                     break;
             }

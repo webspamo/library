@@ -14,7 +14,7 @@
             <form
                 action="#"
                 class="modal-form"
-                @submit="saveVisitor">
+                @submit="saveBook">
                 <h3>{{ modalDetails.header }}</h3>
                 <label for="">Book's title:</label>
                 <input
@@ -25,12 +25,20 @@
                 <label for="">Author:</label>
                 <input
                     type="text"
+                    required
                     placeholder="Ernest Hemingway"
                     v-model="modalDetails.author" />
+                <label for="">Language:</label>
+                <input
+                    type="text"
+                    required
+                    placeholder="English"
+                    v-model="modalDetails.language" />
                 <label for="">Published:</label>
                 <input
                     type="text"
-                    pattern="[1-2][0-9]{3}"
+                    required
+                    pattern="[1-2][0-9]{2,3}"
                     minlength="4"
                     maxlength="4"
                     placeholder="1952"
@@ -38,7 +46,8 @@
                 <label for="">Pages:</label>
                 <input
                     type="text"
-                    pattern="[1-9][0-9]{0-3}"
+                    required
+                    pattern="[1-9][0-9]{1,2}"
                     minlength="1"
                     maxlength="4"
                     placeholder="127"
@@ -54,8 +63,8 @@
                     </button>
                     <input
                         type="text"
-                        pattern="\d+"
                         required
+                        pattern="\d+"
                         v-model="modalDetails.amount"
                         class="quantity-input" />
                     <button
@@ -69,7 +78,7 @@
                     <BaseButton
                         class="delete-button"
                         v-if="modalType === 'edit'"
-                        @click="deleteVisitor()">
+                        @click="deleteBook()">
                         Delete
                     </BaseButton>
                     <BaseButton
@@ -84,7 +93,6 @@
 
     <hr />
     <div class="options">
-        //edit ..........
         <div class="option">
             <label for="parameters">Sort by:</label>
             <select
@@ -92,9 +100,12 @@
                 id="parameters"
                 v-model="sortParameter">
                 <option value="id">ID</option>
-                <option value="name">NAME</option>
+                <option value="title">TITLE</option>
+                <option value="author">AUTHOR</option>
+                <option value="language">LANGUAGE</option>
+                <option value="year">YEAR</option>
             </select>
-            <BaseButton @click="sortCardsBy(sortParameter)">Sort</BaseButton>
+            <BaseButton @click="sortBooksBy(sortParameter)">Sort</BaseButton>
         </div>
         <div class="option">
             <label for="">Search:</label>
@@ -112,7 +123,6 @@
             <th>ID</th>
             <th>TITLE</th>
             <th>AUTHOR</th>
-            <th>COUNTRY</th>
             <th>LANGUAGE</th>
             <th>YEAR</th>
             <th>PAGES</th>
@@ -126,7 +136,6 @@
                 <td>{{ book.id }}</td>
                 <td>{{ book.title }}</td>
                 <td>{{ book.author }}</td>
-                <td>{{ book.country }}</td>
                 <td>{{ book.language }}</td>
                 <td>{{ book.year }}</td>
                 <td>{{ book.pages }}</td>
@@ -167,10 +176,11 @@ export default {
             isModalOpen: false,
             modalType: "",
             modalDetails: {
-                visitorId: null,
                 header: "",
+                bookId: null,
                 title: "",
                 author: "",
+                language: "",
                 year: "",
                 pages: "",
                 amount: 1,
@@ -192,18 +202,73 @@ export default {
                     book.author
                         .toLowerCase()
                         .indexOf(this.search.toLowerCase()) !== -1 ||
-                    book.country
+                    book.language
                         .toLowerCase()
                         .indexOf(this.search.toLowerCase()) !== -1 ||
-                    book.year.indexOf(this.search) !== -1
+                    String(book.year).indexOf(this.search) !== -1 ||
+                    String(book.id).indexOf(this.search) !== -1
                 );
             });
         },
     },
 
     methods: {
-        openModal(type, visitor = null) {
-            ///edit
+        saveBook() {
+            if (this.modalType === "new") {
+                const newBook = {
+                    id: null,
+                    title: "",
+                    author: "",
+                    language: "",
+                    year: "",
+                    pages: "",
+                    amount: 1,
+                };
+                newBook.id = Date.now() - 1674000000000;
+                newBook.title = this.modalDetails.title.trim();
+                newBook.author = this.modalDetails.author.trim();
+                newBook.language = this.modalDetails.language.trim();
+                newBook.year = this.modalDetails.year;
+                newBook.pages = this.modalDetails.pages;
+                newBook.amount = this.modalDetails.amount;
+
+                this.booksList.push(newBook);
+            } else if (this.modalType === "edit") {
+                const bookId = this.modalDetails.bookId;
+
+                const book = this.booksList.find((book) => book.id === bookId);
+                book.title = this.modalDetails.title;
+                book.author = this.modalDetails.author;
+                book.language = this.modalDetails.language;
+                book.year = this.modalDetails.year;
+                book.pages = this.modalDetails.pages;
+                book.amount = this.modalDetails.amount;
+            }
+            this.isModalOpen = false;
+
+            this.modalDetails.title = "";
+            this.modalDetails.author = "";
+            this.modalDetails.language = "";
+            this.modalDetails.year = "";
+            this.modalDetails.pages = "";
+            this.modalDetails.amount = 1;
+        },
+        deleteBook() {
+            const bookIndex = this.booksList.findIndex(
+                (book) => book.id === this.modalDetails.bookId
+            );
+            this.booksList.splice(bookIndex, 1);
+
+            this.isModalOpen = false;
+
+            this.modalDetails.title = "";
+            this.modalDetails.author = "";
+            this.modalDetails.language = "";
+            this.modalDetails.year = "";
+            this.modalDetails.pages = "";
+            this.modalDetails.amount = 1;
+        },
+        openModal(type, book = null) {
             this.isModalOpen = true;
             this.modalType = type;
 
@@ -216,7 +281,42 @@ export default {
                 case "edit":
                     {
                         this.modalDetails.header = "Edit book:";
-                        this.modalDetails.visitorId = visitor.id;
+                        this.modalDetails.bookId = book.id;
+                        this.modalDetails.title = book.title;
+                        this.modalDetails.author = book.author;
+                        this.modalDetails.language = book.language;
+                        this.modalDetails.year = book.year;
+                        this.modalDetails.pages = book.pages;
+                        this.modalDetails.amount = book.amount;
+                    }
+                    break;
+            }
+        },
+        sortBooksBy(parameter) {
+            switch (parameter) {
+                case "title":
+                case "author":
+                case "language":
+                    {
+                        this.booksList.sort((a, b) => {
+                            const nameA = a[parameter].toUpperCase();
+                            const nameB = b[parameter].toUpperCase();
+                            if (nameA < nameB) {
+                                return -1;
+                            }
+                            if (nameA > nameB) {
+                                return 1;
+                            }
+                            return 0;
+                        });
+                    }
+                    break;
+                case "id":
+                case "year":
+                    {
+                        this.booksList.sort(
+                            (a, b) => a[parameter] - b[parameter]
+                        );
                     }
                     break;
             }

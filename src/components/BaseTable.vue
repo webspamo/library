@@ -45,6 +45,7 @@ export default {
 }
 
 :deep(table) {
+    width: 100%;
     border-collapse: collapse;
     border-bottom: 2px solid #048a81;
     table-layout: fixed;
