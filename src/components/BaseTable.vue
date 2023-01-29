@@ -61,7 +61,7 @@ export default {
     tbody {
         tr {
             &:nth-of-type(even) {
-                background-color: rgba($color: #fff, $alpha: 0.07);
+                background-color: rgba($color: rgb(0, 255, 255), $alpha: 0.07);
             }
         }
 

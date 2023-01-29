@@ -63,6 +63,16 @@ export default {
     }
 }
 
+BaseTable {
+    tbody {
+        tr {
+            &:nth-of-type(even) {
+                background-color: rgba($color: rgb(0, 255, 255), $alpha: 0.7);
+            }
+        }
+    }
+}
+
 .close {
     width: 1em;
     height: 1em;

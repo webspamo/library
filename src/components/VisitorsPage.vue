@@ -105,6 +105,9 @@ import BaseButton from "./BaseButton.vue";
 import BaseTable from "./BaseTable.vue";
 import BaseModal from "./BaseModal.vue";
 
+import {mapWritableState} from "pinia";
+import {useVisitorsStore} from "./stores/visitorsStore";
+
 export default {
     name: "VisitorsPage",
     components: {
@@ -113,7 +116,6 @@ export default {
         BaseModal,
         SvgIcon,
     },
-    props: {},
     data() {
         return {
             visitorsList: [],
@@ -132,6 +134,7 @@ export default {
         };
     },
     computed: {
+        ...mapWritableState(useVisitorsStore, ["count"]),
         filteredVisitorsList() {
             return this.visitorsList.filter((visitor) => {
                 return (

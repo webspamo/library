@@ -16,20 +16,54 @@
                 class="modal-form"
                 @submit="saveCard">
                 <h3>{{ modalDetails.header }}</h3>
+                <div class="content-container">
+                    <div class="content-visitor">
+                        <label>
+                            Search Visitor:
+                            <input
+                                type="search"
+                                required
+                                v-model="search" />
+                        </label>
 
-                <label for="">Full name:</label>
-                <input
-                    type="text"
-                    v-model="modalDetails.name" />
-                <label for="">Phone number:</label>
-                <input
-                    type="tel"
-                    pattern="0[0-9]{2}[0-9]{3}[0-9]{4}"
-                    minlength="10"
-                    maxlength="10"
-                    placeholder="0504217890"
-                    v-model="modalDetails.phone" />
+                        <BaseTable :entries="booksList">
+                            <template #thead>
+                                <th>VISITOR</th>
+                            </template>
+                            <template #tbody>
+                                <tr
+                                    v-for="visitor in visitorsList"
+                                    :key="visitor">
+                                    <td class="table-cell">
+                                        {{ visitor.name }}
+                                    </td>
+                                </tr>
+                            </template>
+                        </BaseTable>
+                    </div>
+                    <div class="content-book">
+                        <label>
+                            Search Book:
+                            <input
+                                type="search"
+                                required
+                                v-model="search" />
+                        </label>
 
+                        <BaseTable :entries="booksList">
+                            <template #thead>
+                                <th>BOOK</th>
+                            </template>
+                            <template #tbody>
+                                <tr
+                                    v-for="book in booksList"
+                                    :key="book">
+                                    <td class="table-cell">{{ book.title }}</td>
+                                </tr>
+                            </template>
+                        </BaseTable>
+                    </div>
+                </div>
                 <div class="modal-controls">
                     <BaseButton
                         class="delete-button"
@@ -44,25 +78,6 @@
                     </BaseButton>
                 </div>
             </form>
-            <div class="modal-aside">
-                <h3>{{ modalDetails.asideHeader }}</h3>
-                <input
-                    type="search"
-                    v-model="search" />
-                <!-- <BaseButton>Search</BaseButton> -->
-                <BaseTable :entries="booksList">
-                    <template #thead>
-                        <th>BOOK</th>
-                    </template>
-                    <template #tbody>
-                        <tr
-                            v-for="book in booksList"
-                            :key="book">
-                            <td>{{ book.title }}</td>
-                        </tr>
-                    </template>
-                </BaseTable>
-            </div>
         </BaseModal>
     </div>
 
@@ -75,9 +90,12 @@
                 id="parameters"
                 v-model="sortParameter">
                 <option value="id">ID</option>
-                <option value="name">NAME</option>
+                <option value="title">TITLE</option>
+                <option value="author">AUTHOR</option>
+                <option value="language">LANGUAGE</option>
+                <option value="year">YEAR</option>
             </select>
-            <BaseButton @click="sortCardsBy(sortParameter)">Sort</BaseButton>
+            <BaseButton @click="sortBooksBy(sortParameter)">Sort</BaseButton>
         </div>
         <div class="option">
             <label for="">Search:</label>
@@ -93,8 +111,10 @@
         :entries="cardsList">
         <template #thead>
             <th>ID</th>
-            <th>NAME</th>
-            <th>PHONE</th>
+            <th>VISITOR</th>
+            <th>BOOK</th>
+            <th>BORROW DATE</th>
+            <th>RETURN DATE</th>
             <th>EDIT</th>
         </template>
         <template #tbody>
@@ -129,16 +149,17 @@ export default {
         BaseModal,
         SvgIcon,
     },
+    props: {},
     data() {
         return {
             booksList: [],
+            visitorsList: [],
             cardsList: [],
             isModalOpen: false,
             modalType: "",
             modalDetails: {
                 visitorId: null,
                 header: "",
-                asideHeader: "",
                 name: "",
                 phone: "",
                 submit: "Save",
@@ -228,6 +249,9 @@ export default {
         if (localStorage.getItem("books")) {
             this.booksList = JSON.parse(localStorage.getItem("books"));
         }
+        if (localStorage.getItem("visitors")) {
+            this.visitorsList = JSON.parse(localStorage.getItem("visitors"));
+        }
     },
 };
 </script>
@@ -244,19 +268,35 @@ export default {
     }
 }
 
-.modal-aside {
-    flex: 1;
+.content {
+    &-container {
+        margin-bottom: 2rem;
 
-    display: flex;
-    flex-direction: column;
+        display: flex;
+        gap: 1rem;
 
-    > label {
-        margin-bottom: 0.2rem;
-        font-weight: 700;
+        & > * {
+            label {
+                margin-bottom: 0.4rem;
+                font-weight: 700;
+            }
+
+            input {
+                margin-bottom: 1.5rem;
+            }
+        }
+        .table-cell {
+            cursor: pointer;
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+        }
     }
 
-    > input {
-        margin-bottom: 1.5rem;
+    &-visitor {
+    }
+
+    &-book {
     }
 }
 .modal-controls {
@@ -269,6 +309,12 @@ export default {
     .delete-button {
         width: 50%;
         background-color: #db4c40;
+    }
+}
+
+.table {
+    &-icon {
+        cursor: pointer;
     }
 }
 </style>
