@@ -118,7 +118,6 @@ export default {
     },
     data() {
         return {
-            visitorsList: [],
             isModalOpen: false,
             modalType: "",
             modalDetails: {
@@ -134,7 +133,7 @@ export default {
         };
     },
     computed: {
-        ...mapWritableState(useVisitorsStore, ["count"]),
+        ...mapWritableState(useVisitorsStore, ["visitorsList"]),
         filteredVisitorsList() {
             return this.visitorsList.filter((visitor) => {
                 return (

@@ -155,10 +155,12 @@
 <script>
 import SvgIcon from "@jamescoyle/vue-icon";
 import {mdiNotebookEditOutline} from "@mdi/js";
-import books from "../../books.json";
 import BaseButton from "./BaseButton.vue";
 import BaseTable from "./BaseTable.vue";
 import BaseModal from "./BaseModal.vue";
+
+import {mapState} from "pinia";
+import {useBooksStore} from "./stores/booksStore";
 
 export default {
     name: "BooksPage",
@@ -172,7 +174,6 @@ export default {
 
     data() {
         return {
-            booksList: books,
             isModalOpen: false,
             modalType: "",
             modalDetails: {
@@ -193,6 +194,7 @@ export default {
     },
 
     computed: {
+        ...mapState(useBooksStore, ["booksList"]),
         filteredBooksList() {
             return this.booksList.filter((book) => {
                 return (
