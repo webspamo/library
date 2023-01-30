@@ -159,7 +159,11 @@ import BaseButton from "./BaseButton.vue";
 import BaseTable from "./BaseTable.vue";
 import BaseModal from "./BaseModal.vue";
 
+<<<<<<< HEAD
 import {mapState} from "pinia";
+=======
+import {mapWritableState} from "pinia";
+>>>>>>> ae8b6ba (attach stores states)
 import {useBooksStore} from "./stores/booksStore";
 
 export default {
@@ -194,7 +198,11 @@ export default {
     },
 
     computed: {
+<<<<<<< HEAD
         ...mapState(useBooksStore, ["booksList"]),
+=======
+        ...mapWritableState(useBooksStore, ["booksList"]),
+>>>>>>> ae8b6ba (attach stores states)
         filteredBooksList() {
             return this.booksList.filter((book) => {
                 return (
@@ -215,6 +223,9 @@ export default {
     },
 
     methods: {
+        updateLocalStorage() {
+            localStorage.setItem("books", JSON.stringify(this.booksList));
+        },
         saveBook() {
             if (this.modalType === "new") {
                 const newBook = {
@@ -329,11 +340,18 @@ export default {
             return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
         },
     },
+    watch: {
+        booksList: {
+            deep: true,
+            handler: function () {
+                this.updateLocalStorage();
+            },
+        },
+    },
     mounted() {
-        // for (const book of books) {
-        //     book.amount = this.getRandomInt(10, 24) + this.getRandomInt(2, 87);
-        // }
-        // console.table(JSON.stringify(books));
+        if (localStorage.getItem("books")) {
+            this.booksList = JSON.parse(localStorage.getItem("books"));
+        }
     },
 };
 </script>

@@ -141,6 +141,10 @@ import BaseButton from "./BaseButton.vue";
 import BaseTable from "./BaseTable.vue";
 import BaseModal from "./BaseModal.vue";
 
+import {mapWritableState} from "pinia";
+import {useVisitorsStore} from "./stores/visitorsStore";
+import {useBooksStore} from "./stores/booksStore";
+
 export default {
     name: "CardsPage",
     components: {
@@ -152,8 +156,6 @@ export default {
     props: {},
     data() {
         return {
-            booksList: [],
-            visitorsList: [],
             cardsList: [],
             isModalOpen: false,
             modalType: "",
@@ -169,6 +171,9 @@ export default {
         };
     },
     computed: {
+        ...mapWritableState(useVisitorsStore, ["visitorsList"]),
+        ...mapWritableState(useBooksStore, ["booksList"]),
+
         filteredCardsList() {
             //edit .....
             return this.cardsList.filter((cards) => {
